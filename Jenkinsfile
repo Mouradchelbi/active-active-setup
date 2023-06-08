@@ -4,7 +4,7 @@ pipeline {
     stage("Git Checkout") {
       steps {
         script {
-          git branch: 'main', credentialsId: 'azure-blog-cred', url: 'https://gitlab.com/shitunjay.opstree/azure-blog.git'
+          git branch: 'main', credentialsId: 'Azureserviceprincipal', url: 'https://gitlab.com/shitunjay.opstree/azure-blog.git'
         }
       }
     }
