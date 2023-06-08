@@ -73,9 +73,10 @@ resource "azurerm_linux_virtual_machine" "example" {
     azurerm_network_interface.example.id,
   ]
 
-  admin_ssh_key {
-    username   = "adminuser"
-    public_key = file("~/.ssh/id_rsa.pub")
+   computer_name = "nginx"
+   admin_username = "azureuser"
+   admin_password = "Azertyuiop123"
+   disable_password_authentication = false
   }
 
   os_disk {
